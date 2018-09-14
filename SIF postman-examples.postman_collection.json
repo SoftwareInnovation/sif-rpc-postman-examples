@@ -1,0 +1,550 @@
+{
+	"info": {
+		"_postman_id": "8d00dbbb-7256-eeb0-d953-24b21d962a8a",
+		"name": "SIF RPC postman examples",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Ping CaseService",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\nparameter:{\n}\n}"
+				},
+				"url": {
+					"raw": "https:// [customer-domain]/Biz/v2/api/call/SI.Data.RPC/SI.Data.RPC/CaseService/Ping?authkey=",
+					"protocol": "https",
+					"host": [
+						"test-integrations-no",
+						"public360online",
+						"com"
+					],
+					"path": [
+						"Biz",
+						"v2",
+						"api",
+						"call",
+						"SI.Data.RPC",
+						"SI.Data.RPC",
+						"CaseService",
+						"Ping"
+					],
+					"query": [
+						{
+							"key": "authkey",
+							"value": ""
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetCases",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\nparameter:{\n\n}\n}"
+				},
+				"url": {
+					"raw": "https:// [customer-domain]/Biz/v2/api/call/SI.Data.RPC/SI.Data.RPC/CaseService/GetCases?authkey=",
+					"protocol": "https",
+					"host": [
+						"test-integrations-no",
+						"public360online",
+						"com"
+					],
+					"path": [
+						"Biz",
+						"v2",
+						"api",
+						"call",
+						"SI.Data.RPC",
+						"SI.Data.RPC",
+						"CaseService",
+						"GetCases"
+					],
+					"query": [
+						{
+							"key": "authkey",
+							"value": ""
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CreateCase",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\"parameter\":{\n\t\"Title\":\"Testcase number one\",\n\t\"UnofficialTitle\":\"Testcase number one with screened title\",\n\t\"ResponsiblePersonRecno\":1,\n\t/*\n\t\"ExternalId\":  {\n\t\tId:\"12355123\",\n\t\tType:\"PostmanCase\"\n\t},\n\t*/\n\t\"ArchiveCodes\":\n\t[ \n\t\t{\n\t\t\t\"Sort\":1,\n\t\t\t\"ArchiveType\":\"recno:60001\",\n\t\t\t\"ArchiveCode\":\"2\"\n\t\t}\n\t\n\t]\n}\n}"
+				},
+				"url": {
+					"raw": "https:// [customer-domain]/Biz/v2/api/call/SI.Data.RPC/SI.Data.RPC/CaseService/CreateCase?authkey=",
+					"protocol": "https",
+					"host": [
+						"test-integrations-no",
+						"public360online",
+						"com"
+					],
+					"path": [
+						"Biz",
+						"v2",
+						"api",
+						"call",
+						"SI.Data.RPC",
+						"SI.Data.RPC",
+						"CaseService",
+						"CreateCase"
+					],
+					"query": [
+						{
+							"key": "authkey",
+							"value": ""
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetContactPersons",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\n\"parameter\": {\n\t\"Active\":true,\n\t\"Categories\": [\"Internal\"]\n}\n}"
+				},
+				"url": {
+					"raw": "https:// [customer-domain]/Biz/v2/api/call/SI.Data.RPC/SI.Data.RPC/ContactService/GetContactPersons?authkey=",
+					"protocol": "https",
+					"host": [
+						"test-integrations-no",
+						"public360online",
+						"com"
+					],
+					"path": [
+						"Biz",
+						"v2",
+						"api",
+						"call",
+						"SI.Data.RPC",
+						"SI.Data.RPC",
+						"ContactService",
+						"GetContactPersons"
+					],
+					"query": [
+						{
+							"key": "authkey",
+							"value": ""
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetEnterprises",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\n\"parameter\": {\n\n}\n}"
+				},
+				"url": {
+					"raw": "https:// [customer-domain]/Biz/v2/api/call/SI.Data.RPC/SI.Data.RPC/ContactService/GetEnterprises?authkey=",
+					"protocol": "https",
+					"host": [
+						"test-integrations-no",
+						"public360online",
+						"com"
+					],
+					"path": [
+						"Biz",
+						"v2",
+						"api",
+						"call",
+						"SI.Data.RPC",
+						"SI.Data.RPC",
+						"ContactService",
+						"GetEnterprises"
+					],
+					"query": [
+						{
+							"key": "authkey",
+							"value": ""
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "SynchronizePrivatePerson",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\nparameter: {\n\tFirstName:\"Siri\",\n\tLastName:\"Testperson\",\n\tExternalID:\"sirisirisiri1\",\n\tActive:\"true\",\n\t\"PrivateAddress\": {\n    \t\"ZipCode\": \"0666\",\n    \t\"ZipPlace\": \"Oslo\",\n    \t\"Country\": \"Norway\"\n    }\n}\n}"
+				},
+				"url": {
+					"raw": "https:// [customer-domain]/Biz/v2/api/call/SI.Data.RPC/SI.Data.RPC/ContactService/SynchronizePrivatePerson?authkey=",
+					"protocol": "https",
+					"host": [
+						"test-integrations-no",
+						"public360online",
+						"com"
+					],
+					"path": [
+						"Biz",
+						"v2",
+						"api",
+						"call",
+						"SI.Data.RPC",
+						"SI.Data.RPC",
+						"ContactService",
+						"SynchronizePrivatePerson"
+					],
+					"query": [
+						{
+							"key": "authkey",
+							"value": ""
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "FileService - UploadFile",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\nparameter: {\nFileData:[0000],\nFileName:\"TestFile2.txt\",\nFileFormat:\"TXT\",\n\n}\n}"
+				},
+				"url": {
+					"raw": "https:// [customer-domain]/Biz/v2/api/call/SI.Data.RPC/SI.Data.RPC/FileService/Upload?authkey=",
+					"protocol": "https",
+					"host": [
+						"test-integrations-no",
+						"public360online",
+						"com"
+					],
+					"path": [
+						"Biz",
+						"v2",
+						"api",
+						"call",
+						"SI.Data.RPC",
+						"SI.Data.RPC",
+						"FileService",
+						"Upload"
+					],
+					"query": [
+						{
+							"key": "authkey",
+							"value": ""
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CreateDocument with Uploaded file",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\nparameter: {\n\tTitle:\"Testdocument with uploaded file\",\n\tCategory:\"recno:60005\",\n\tStatus:\"recno:1\",\n\tCaseNumber:\"18/00001\",\n\tFiles:\n\t[\n\t\t{\n\t\t\tTitle:\"Pre-uploaded file\", \n\t\t\tFormat:\"TXT\", \n\t\t\tUploadedFileReference: \"4792df9e-3419-46dd-8ed9-d87ae4d62926\\\\TestFile2.TXT\"  \n\t\t}\n\t]\n}\n}"
+				},
+				"url": {
+					"raw": "https:// [customer-domain]/Biz/v2/api/call/SI.Data.RPC/SI.Data.RPC/DocumentService/CreateDocument?authkey=",
+					"protocol": "https",
+					"host": [
+						"test-integrations-no",
+						"public360online",
+						"com"
+					],
+					"path": [
+						"Biz",
+						"v2",
+						"api",
+						"call",
+						"SI.Data.RPC",
+						"SI.Data.RPC",
+						"DocumentService",
+						"CreateDocument"
+					],
+					"query": [
+						{
+							"key": "authkey",
+							"value": ""
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CreateDocument with filedata",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\nparameter: {\n\tTitle:\"Testdocument with uploaded file\",\n\tCategory:\"recno:60005\",\n\tStatus:\"recno:1\",\n\tCaseNumber:\"18/00001\",\n\tResponsibleEnterpriseRecno:\"506\",\n\tFiles:\n\t\t[\n\t\t\t{\n\t\t\t\tTitle:\"Just a file\", \n\t\t\t\tFormat:\"TXT\", \n\t\t\t\tBase64Data:\"aGVsbG8gd29ybGQ=\"  \n\t\t\t}\n\t\t]\n\t},\n\n}"
+				},
+				"url": {
+					"raw": "https:// [customer-domain]/Biz/v2/api/call/SI.Data.RPC/SI.Data.RPC/DocumentService/CreateDocument?authkey=",
+					"protocol": "https",
+					"host": [
+						"test-integrations-no",
+						"public360online",
+						"com"
+					],
+					"path": [
+						"Biz",
+						"v2",
+						"api",
+						"call",
+						"SI.Data.RPC",
+						"SI.Data.RPC",
+						"DocumentService",
+						"CreateDocument"
+					],
+					"query": [
+						{
+							"key": "authkey",
+							"value": ""
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetDocuments",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "/* Search for one document based on document number */\n{\n\t\"parameter\": {\n\t\t\"DocumentNumber\":\"18/00001-4\",\n\t}\n}\n\n\n/* Search for all documents, return 10 */\n/*\n {\n \t\"parameter\": {\n \t\t\"MaxReturnedDocuments\":10\n \t}\n }\n */\n\n/* Search for documents in a case based on case external ID */\n/*\n {\n \t\"parameter\": {\n \t\t\"CaseExternalId\":\n \t\t{\n \t\t\t\"Type\":\"SIF WS\",\n \t\t\t\"Id\":\"12345\"\n \t\t}\n \t}\n }\n */\n"
+				},
+				"url": {
+					"raw": "https:// [customer-domain]/Biz/v2/api/call/SI.Data.RPC/SI.Data.RPC/DocumentService/GetDocuments?authkey=",
+					"protocol": "https",
+					"host": [
+						"test-integrations-no",
+						"public360online",
+						"com"
+					],
+					"path": [
+						"Biz",
+						"v2",
+						"api",
+						"call",
+						"SI.Data.RPC",
+						"SI.Data.RPC",
+						"DocumentService",
+						"GetDocuments"
+					],
+					"query": [
+						{
+							"key": "authkey",
+							"value": ""
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetFileWithMetadata",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"parameter\": {\n\t\t\"Recno\":200011,\n\t\t\"IncludeFileData\":true\n\t}\n}\n"
+				},
+				"url": {
+					"raw": "https:// [customer-domain]/Biz/v2/api/call/SI.Data.RPC/SI.Data.RPC/FileService/GetFileWithMetadata?authkey=",
+					"protocol": "https",
+					"host": [
+						"test-integrations-no",
+						"public360online",
+						"com"
+					],
+					"path": [
+						"Biz",
+						"v2",
+						"api",
+						"call",
+						"SI.Data.RPC",
+						"SI.Data.RPC",
+						"FileService",
+						"GetFileWithMetadata"
+					],
+					"query": [
+						{
+							"key": "authkey",
+							"value": ""
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetCodeTableRows NoarkClassCode",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\"parameter\": {\n\t\"CodeTableName\":\"Noark Classification code\"\n\t}\n}"
+				},
+				"url": {
+					"raw": "https:// [customer-domain]/Biz/v2/api/call/SI.Data.RPC/SI.Data.RPC/SupportService/GetCodeTableRows?authkey=",
+					"protocol": "https",
+					"host": [
+						"test-integrations-no",
+						"public360online",
+						"com"
+					],
+					"path": [
+						"Biz",
+						"v2",
+						"api",
+						"call",
+						"SI.Data.RPC",
+						"SI.Data.RPC",
+						"SupportService",
+						"GetCodeTableRows"
+					],
+					"query": [
+						{
+							"key": "authkey",
+							"value": ""
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetCodeTableRows DocumentCat Norwegian",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\nparameter: {\n\tCodeTableName:\"code table: Document category\",\n\tLanguage:\"NOR\"\n\t}\n}"
+				},
+				"url": {
+					"raw": "https:// [customer-domain]/Biz/v2/api/call/SI.Data.RPC/SI.Data.RPC/SupportService/GetCodeTableRows?authkey=",
+					"protocol": "https",
+					"host": [
+						"test-integrations-no",
+						"public360online",
+						"com"
+					],
+					"path": [
+						"Biz",
+						"v2",
+						"api",
+						"call",
+						"SI.Data.RPC",
+						"SI.Data.RPC",
+						"SupportService",
+						"GetCodeTableRows"
+					],
+					"query": [
+						{
+							"key": "authkey",
+							"value": ""
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
